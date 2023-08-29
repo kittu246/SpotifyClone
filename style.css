@@ -85,6 +85,7 @@
     background-color: var(--grey);
     z-index: 1000;
     margin-top: 0px !important;
+    padding-top: 0px;
   }
   .flex-top{
     display: flex;
@@ -116,14 +117,7 @@
     padding-bottom: 6rem;
 
   }
-  .player{
-    position: fixed;
-    background-color: var(--black);
-    bottom:0;
-    left:0;
-    height:5rem;
-    width:100%;
-  }
+  
   .artist{
     width: 100%;
     border-radius: 5px;
@@ -155,7 +149,7 @@
     height:3.5em;
     width:3.5rem;
     overflow: hidden;
-    border-radius: .5rem
+    
   }
   .playing-music-title{
     margin: 6px 10px;
@@ -215,8 +209,20 @@
   .profile{
     border-radius: 50%;
   }
+  .card{
+    position: relative;
+  }
+  .play-button{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    opacity:0;
+  }
+
+
   .card-album{
     display: flex;
+    flex-wrap: wrap;
     
   }
 
@@ -224,16 +230,25 @@
 
     background-color: var(--light-grey);
     height:18rem;
-    width:13rem;
+    width:11rem;
     border-radius: .5rem;
     padding:1.1rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin-inline:1rem;
+    margin:1rem;
 
 
   }
+  .card-container:hover{
+    box-shadow: 0px 0px 10px rgb(75, 75, 75);
+    
+
+  }
+  .play-button:hover{
+    opacity:1;
+  }
+
   .spotify-albums>h2{
     font-weight: bold;
     margin-left: 1rem;
@@ -244,7 +259,7 @@
     flex:2 ;
     overflow: hidden;
     border-radius: .5rem;
-    flex-wrap: wrap;
+    
     
   }
   .card-title{
@@ -269,7 +284,14 @@
     display:flex;
     width:100vw;
     justify-content: space-between;
-    height:80px;
+    height:auto;
+    position: fixed;
+    background-color: var(--black);
+    bottom:0;
+    left:0;
+    height:5rem;
+    width:100%;
+    z-index: 1000;
   }
   .player-1{
      flex:2;
@@ -359,6 +381,7 @@
     background-position: top;
     background-size: cover;
 }
+
 .mohit-page>div{
   font-size: large;
   margin: 5px;
@@ -373,8 +396,12 @@
   }
 
   .mid-section {
-    background-image: linear-gradient(rgb(6, 31, 31),rgb(4, 19, 19),var(--black), var(--black));
+    background-image: linear-gradient(#041118,var(--black), var(--black));
   }
+  .mid-section-sunidhi {
+    background-image: linear-gradient(#031430,var(--black), var(--black));
+  }
+
 
   .between-center{
     justify-content: space-between;
@@ -395,6 +422,83 @@
   .light:hover{
     opacity: 1;
   }
+
+  .sunidhi-background{
+    background-image: url(https://i2.cinestaan.com/image-bank/640-360/168001-169000/168392.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+@media screen and (max-width:767px) {
+  .player{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .navbar,.navbar-1,.navbar-2{
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile{
+    border-radius: 20px;
+    width:50%;
+    justify-content: center;
+  }
+  .spotify-albums{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .card-album{
+
+    flex-direction: column;
+    justify-content: center;
+     align-items: center;
+
+  }
+  .top-icons,.flex-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .sidebar{
+    width:50%;
+  }
+  .asset-plus,.right-move,.recent-bar,.side-items{
+    display:none;
+  }
+
+  .mohit-page>h1{
+
+    font-size: 3rem;
+      font-weight: bold;
+  }
+  .library{
+    
+    padding-top: 0px;
+  }
+ 
+}
+
+@media screen and (max-width:671px){
+.playlist-section{
+  flex-direction: column;
+  align-items: center;
+}
+
+.mid-section{
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+
+}
+
+}
 
 
 
