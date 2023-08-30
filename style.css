@@ -471,9 +471,11 @@
   .sidebar{
     width:50%;
   }
-  .asset-plus,.right-move,.recent-bar,.side-items{
+  .asset-plus,.right-move,.recent-bar,.side-items,.navbar-1{
     display:none;
   }
+  
+ 
 
   .mohit-page>h1{
 
